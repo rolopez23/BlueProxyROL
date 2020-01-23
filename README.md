@@ -4,10 +4,9 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Big-Tunas/Bluefin-Proxy
+  - https://github.com/Big-Tunas/Bluefin-Service
+
 
 ## Table of Contents
 

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App exists 1`] = `
+<div>
+  I'm an App!
+</div>
+`;

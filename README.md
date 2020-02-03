@@ -2,10 +2,9 @@
 
 > Project description
 
-## Related Projects
+## Related Projects (Submodules in .git)
 
-  - https://github.com/Big-Tunas/Bluefin-Proxy
-  - https://github.com/Big-Tunas/Bluefin-Service
+
 
 
 ## Table of Contents

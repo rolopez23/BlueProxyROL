@@ -3,7 +3,15 @@
 > Project description
 
 ## Related Projects (Submodules in .git)
-
+[submodule "mortgage/Bluefin-Mortgage-Service"]
+	path = mortgage/Bluefin-Mortgage-Service
+	url = https://github.com/Big-Tunas/Bluefin-Mortgage-Service.git
+[submodule "similiarHomes/Bluefin-Service-SimilarHomes"]
+	path = similiarHomes/Bluefin-Service-SimilarHomes
+	url = https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes.git
+[submodule "Bluefin-Service-ScheduleTour"]
+	path = Bluefin-Service-ScheduleTour
+	url = https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour.git
 
 
 

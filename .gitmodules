@@ -1,0 +1,9 @@
+[submodule "mortgage/Bluefin-Mortgage-Service"]
+	path = mortgage/Bluefin-Mortgage-Service
+	url = https://github.com/Big-Tunas/Bluefin-Mortgage-Service.git
+[submodule "mortgage/Bluefin-Service-SimilarHomes"]
+	path = mortgage/Bluefin-Service-SimilarHomes
+	url = https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes.git
+[submodule "similiarHomes/Bluefin-Service-SimilarHomes"]
+	path = similiarHomes/Bluefin-Service-SimilarHomes
+	url = https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes.git

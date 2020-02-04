@@ -13,7 +13,9 @@
     "test": "jest --config ./jest.config.js",
     "test:watch": "npm run test -- --watch",
     "updateAll": "git submodule foreach pull origin master",
-    "serverAll": "git submodule foreach npm run server"
+    "serverAll": "git submodule foreach npm run server",
+    "webpackAll": "git submodule foreach npm run bundle",
+    "seedAll": "git submodule foreach npm run seed"
   },
   "dependencies": {
     "aws-sdk": "^2.610.0",

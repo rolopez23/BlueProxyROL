@@ -1,0 +1,42 @@
+#main {
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: 1fr 770px 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+img {
+  width: 100%;
+}
+
+#image {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  width: 728px;
+  height: 511px;
+}
+
+#app {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 400px;
+  position: sticky;
+  top: 0;
+}
+
+#mortgage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+
+
+
+
+#listings {
+  grid-column-start: 1;
+  grid-column-end: 2;
+};

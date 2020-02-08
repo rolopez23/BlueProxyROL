@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const httpProxy = require('http-proxy');
 const axios = require('axios');
+const path = require('path');
 
 const proxy = require('./proxyServer/');
 
@@ -65,7 +66,7 @@ mainApp.get('/similiarHomes/*', (req, res) => {
 });
 
 
-mainApp.use(express.static('public'));
+mainApp.use(express.static(path.join(__dirname, '..','public')));
 
 
 

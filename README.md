@@ -1,19 +1,19 @@
 # Project Name
 
-> Project description
+> Real Estate Item Detail Page Markup
 
-## Related Projects (Submodules in .git)
-[submodule "mortgage/Bluefin-Mortgage-Service"]
-	path = mortgage/Bluefin-Mortgage-Service
-	url = https://github.com/Big-Tunas/Bluefin-Mortgage-Service.git
-[submodule "similiarHomes/Bluefin-Service-SimilarHomes"]
-	path = similiarHomes/Bluefin-Service-SimilarHomes
-	url = https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes.git
-[submodule "Bluefin-Service-ScheduleTour"]
-	path = Bluefin-Service-ScheduleTour
-	url = https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour.git
+## Related Projects
+Mortgage Calculator:
+https://github.com/Big-Tunas/Bluefin-Mortgage-Service
+Current IP: http://13.52.171.152:4003/
 
+Similiar Homes:
+https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes
+Current IP: http://18.144.115.157:4004/
 
+Calendar Widget:
+https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour
+Current IP: http://52.52.152.21:3002/
 
 ## Table of Contents
 
@@ -23,13 +23,13 @@
 
 ## Usage
 
-> Some usage instructions
+> Proxy Server sets deployed on Amazon AWS current address is http://18.144.115.107:4000/. Used to render Bluefin webpage.
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
+- Node 8.15.1
 - etc
 
 ## Development
@@ -39,7 +39,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
 

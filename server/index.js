@@ -1,44 +1,41 @@
+// Package Dependencies
 const express = require('express');
 const morgan = require('morgan');
-const httpProxy = require('http-proxy');
-const axios = require('axios');
 const path = require('path');
 
+
+// File Dependencies
 const proxy = require('./proxyServer/');
+const routes = require('./routes.js');
 
-var apiProxy = httpProxy.createProxyServer();
-
+// Express
 const mainApp = express();
 
+// MiddleWare
 const proxyServer = new proxy.Server;
 
-const MortgageBucket = 'http://13.52.171.152:4003';
-const SimiliarBucket = 'http://18.144.115.157:4004';
-const ScheduleBucket = 'http://52.52.152.21:3002';
 const mainPort = 4000;
 
-
-const AWS = 'https://bluefinrol.s3-us-west-1.amazonaws.com';
 
 
 mainApp.use(morgan('combined'));
 
 mainApp.get('/mortgageApp/*', (req, res) => {
   const path = '/dist/bundle.js';
-  proxyServer.redirect(req, res, MortgageBucket, path);
+  proxyServer.redirect(req, res, routes.MortgageBucket, path);
 
 });
 
 mainApp.get('/scheduleTour/*', (req, res) => {
   console.log('AWS Request');
-  proxyServer.redirect(req, res, ScheduleBucket, '/bundle.js');
+  proxyServer.redirect(req, res, routes.ScheduleBucket, '/bundle.js');
 });
 
 mainApp.get('/similiarHomes/*', (req, res) => {
 
   // proxyServer.redirect(req, res, AWS);
   const path = '/dist/bundle.js';
-  proxyServer.redirect(req, res, SimiliarBucket, path);
+  proxyServer.redirect(req, res, routes.SimiliarBucket, path);
 
 });
 
@@ -60,10 +57,6 @@ mainApp.get('/house', (req, res) => {
 mainApp.get('/similar-listings', (req, res) => {
   console.log('Similar Homes Request');
   proxyServer.redirect(req, res, SimiliarBucket);
-  // axios.get('http://18.144.115.157:4004/similar-listings')
-  //   .then((response) => {
-  //     res.send(response.data);
-  //   });
 });
 
 mainApp.listen(mainPort, () => {

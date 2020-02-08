@@ -13,7 +13,7 @@ const mainApp = express();
 const proxyServer = new proxy.Server;
 
 const MortgageBucket = 'http://13.52.171.152:4003';
-const SimiliarBucket = 'http://13.57.210.79:4004';
+const SimiliarBucket = 'http://18.144.115.157:4004';
 const ScheduleBucket = 'http://52.52.152.21:3002';
 const mainPort = 4000;
 
@@ -89,10 +89,11 @@ mainApp.get('/house', (req, res) => {
 
 mainApp.get('/similar-listings', (req, res) => {
   console.log('Similar Homes Request');
-  axios.get('http://13.57.210.79:4004/similar-listings')
-    .then((response) => {
-      res.send(response.data);
-    });
+  proxyServer.redirect(req, res, SimiliarBucket);
+  // axios.get('http://18.144.115.157:4004/similar-listings')
+  //   .then((response) => {
+  //     res.send(response.data);
+  //   });
 });
 
 mainApp.listen(mainPort, () => {

@@ -13,50 +13,46 @@ const mainApp = express();
 
 // MiddleWare
 const proxyServer = new proxy.Server;
+mainApp.use(morgan('combined'));
 
+//Port
 const mainPort = 4000;
 
-
-
-mainApp.use(morgan('combined'));
+mainApp.use(express.static(path.join(__dirname, '..', 'public')));
 
 mainApp.get('/mortgageApp/*', (req, res) => {
   const path = '/dist/bundle.js';
+  console.log('mortgageRequest', routes.MortgageBucket)
   proxyServer.redirect(req, res, routes.MortgageBucket, path);
-
 });
 
 mainApp.get('/scheduleTour/*', (req, res) => {
-  console.log('AWS Request');
-  proxyServer.redirect(req, res, routes.ScheduleBucket, '/bundle.js');
+  const path = '/bundleDev.js'
+  proxyServer.redirect(req, res, routes.AWS2, path);
 });
 
 mainApp.get('/similiarHomes/*', (req, res) => {
-
-  // proxyServer.redirect(req, res, AWS);
   const path = '/dist/bundle.js';
   proxyServer.redirect(req, res, routes.SimiliarBucket, path);
 
 });
 
 
-mainApp.use(express.static(path.join(__dirname, '..', 'public')));
-
 
 
 mainApp.get('/mortgage:listingId', (req, res) => {
   console.log('MortgageRequest');
-  proxyServer.redirect(req, res, MortgageBucket);
+  proxyServer.redirect(req, res, routes.MortgageBucket);
 });
 
 mainApp.get('/house', (req, res) => {
   console.log('house');
-  proxyServer.redirect(req, res, ScheduleBucket);
+  proxyServer.redirect(req, res, routes.ScheduleBucket);
 });
 
 mainApp.get('/similar-listings', (req, res) => {
   console.log('Similar Homes Request');
-  proxyServer.redirect(req, res, SimiliarBucket);
+  proxyServer.redirect(req, res, routes.SimiliarBucket);
 });
 
 mainApp.listen(mainPort, () => {

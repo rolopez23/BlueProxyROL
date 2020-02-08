@@ -1,10 +1,1 @@
 
-[submodule "client/src/components/Bluefin-Mortgage-Service"]
-	path = client/src/components/Bluefin-Mortgage-Service
-	url = https://github.com/Big-Tunas/Bluefin-Mortgage-Service.git
-[submodule "client/src/components/Bluefin-Service-SimilarHomes"]
-	path = client/src/components/Bluefin-Service-SimilarHomes
-	url = https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes.git
-[submodule "client/src/components/Bluefin-Service-ScheduleTour"]
-	path = client/src/components/Bluefin-Service-ScheduleTour
-	url = https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour.git

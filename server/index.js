@@ -24,67 +24,37 @@ const AWS = 'https://bluefinrol.s3-us-west-1.amazonaws.com';
 mainApp.use(morgan('combined'));
 
 mainApp.get('/mortgageApp/*', (req, res) => {
-  const fullRoute = MortgageBucket + '/dist/bundle.js';
-  axios.get(fullRoute)
-    .catch((error) => {
-      res.send(error);
-    })
-    .then((response)=>{
-      // console.log(response.data);
-      res.send(response.data);
-    });
+  const path = '/dist/bundle.js';
+  proxyServer.redirect(req, res, MortgageBucket, path);
+
 });
 
 mainApp.get('/scheduleTour/*', (req, res) => {
   console.log('AWS Request');
-  // apiProxy.web(req, res, {target: MortgageServer});
-  proxyServer.redirect(req, res, AWS);
-  const fullRoute = ScheduleBucket + '/bundle.js';
-  axios.get(fullRoute)
-    .catch((error) => {
-      res.send(error);
-    })
-    .then((response)=>{
-      // console.log(response.data);
-      res.send(response.data);
-    });
+  proxyServer.redirect(req, res, ScheduleBucket, '/bundle.js');
 });
 
 mainApp.get('/similiarHomes/*', (req, res) => {
-  // console.log('AWS Request');
-  // apiProxy.web(req, res, {target: MortgageServer});
+
   // proxyServer.redirect(req, res, AWS);
-  const fullRoute = SimiliarBucket + '/dist/bundle.js';
-  axios.get(fullRoute)
-    .catch((error) => {
-      res.send(error);
-    })
-    .then((response)=>{
-      // console.log(response.data);
-      res.send(response.data);
-    });
+  const path = '/dist/bundle.js';
+  proxyServer.redirect(req, res, SimiliarBucket, path);
+
 });
 
 
-mainApp.use(express.static(path.join(__dirname, '..','public')));
+mainApp.use(express.static(path.join(__dirname, '..', 'public')));
 
 
 
 mainApp.get('/mortgage:listingId', (req, res) => {
   console.log('MortgageRequest');
-  // apiProxy.web(req, res, {target: MortgageServer});
   proxyServer.redirect(req, res, MortgageBucket);
 });
 
 mainApp.get('/house', (req, res) => {
-  // console.log('Schedule Request');
-  // apiProxy.web(req, res, {target: ScheduleServer});
   console.log('house');
   proxyServer.redirect(req, res, ScheduleBucket);
-  // axios.get('http://52.52.152.21:3002/house')
-  //   .then((response) => {
-  //     res.send(response.data);
-  //   });
 });
 
 mainApp.get('/similar-listings', (req, res) => {

@@ -2,19 +2,23 @@ const axios = require('axios');
 
 class Server {
   constructor() {
-
+    // Boolean whether to include the prior path on target.
   }
 
-  redirect(req, res, target) {
-    const url = req.url;
-    const fullRoute = target + url;
-    // console.log('fullRoute', fullRoute);
+  redirect(req, res, target, path = null) {
+    let fullRoute = target;
+    if (path === null) {
+      const url = req.url;
+      fullRoute = target + url;
+    } else {
+      fullRoute = target + path;
+      // console.log(target + path);
+    }
     axios.get(fullRoute)
-      .catch((error) => console.error(target, error))
       .then((response) => {
-        // console.log('response received', response.data);
         return res.send(response.data);
-      });
+      })
+      .catch((error) => console.error('error'));
 
   }
 }

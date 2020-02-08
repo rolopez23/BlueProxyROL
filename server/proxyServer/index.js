@@ -8,9 +8,9 @@ class Server {
   redirect(req, res, target) {
     const url = req.url;
     const fullRoute = target + url;
-    console.log('fullRoute', fullRoute);
+    // console.log('fullRoute', fullRoute);
     axios.get(fullRoute)
-      .catch(console.log(`error   in ${target} route`))
+      .catch((error) => console.error(target, error))
       .then((response) => {
         // console.log('response received', response.data);
         return res.send(response.data);

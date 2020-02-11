@@ -6,14 +6,17 @@
 Mortgage Calculator:
 https://github.com/Big-Tunas/Bluefin-Mortgage-Service
 Current IP: http://54.215.170.152:4003/
+LeadEngineer: https://github.com/rolopez23
 
 Similiar Homes:
 https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes
 Current IP: http://18.144.115.157:4004/
+Lead Engineer: https://github.com/kevinyhong
 
 Calendar Widget:
 https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour
 Current IP: http://52.52.152.21:3002/
+Lead Engineer: https://github.com/MarkVincentGo
 
 ## Table of Contents
 
@@ -23,7 +26,7 @@ Current IP: http://52.52.152.21:3002/
 
 ## Usage
 
-> Proxy Server sets deployed on Amazon AWS current address is http://18.144.115.107:4000/. Used to render Bluefin webpage.
+> Proxy Server sets deployed on Amazon AWS current address is http://54.241.98.251:4000/. Used to render Bluefin webpage.
 
 ## Requirements
 

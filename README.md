@@ -5,7 +5,7 @@
 ## Related Projects
 Mortgage Calculator:
 https://github.com/Big-Tunas/Bluefin-Mortgage-Service
-Current IP: http://13.52.171.152:4003/
+Current IP: http://54.215.170.152:4003/
 
 Similiar Homes:
 https://github.com/Big-Tunas/Bluefin-Service-SimilarHomes

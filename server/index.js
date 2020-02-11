@@ -22,13 +22,13 @@ mainApp.use(express.static(path.join(__dirname, '..', 'public')));
 
 mainApp.get('/mortgageApp/*', (req, res) => {
   const path = '/dist/bundle.js';
-  console.log('mortgageRequest', routes.MortgageBucket)
+  // console.log('mortgageRequest', routes.MortgageBucket)
   proxyServer.redirect(req, res, routes.MortgageBucket, path);
 });
 
 mainApp.get('/scheduleTour/*', (req, res) => {
-  const path = '/bundleDev.js'
-  proxyServer.redirect(req, res, routes.AWS2, path);
+  console.log('ScheduleTour',routes.AWS);
+  proxyServer.redirect(req, res, routes.AWS);
 });
 
 mainApp.get('/similiarHomes/*', (req, res) => {

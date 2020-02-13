@@ -26,7 +26,7 @@ Lead Engineer: https://github.com/MarkVincentGo
 
 ## Usage
 
-> Proxy Server sets deployed on Amazon AWS current address is http://54.241.98.251:4000/. Used to render Bluefin webpage.
+> Proxy Server is currently undeployed, message Author for AWS Demo. Used to render Bluefin webpage.
 
 ## Requirements
 
